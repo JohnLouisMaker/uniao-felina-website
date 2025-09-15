@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+
+@font-face {
+    font-family:"Shrikhand";
+    src: url("./assets//fonts/Shrikhand-Regular.ttf") format("truetype");
+}
+
+@theme{
+    --font-shikhand: Shrikhand;
+}
