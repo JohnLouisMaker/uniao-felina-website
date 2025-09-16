@@ -6,8 +6,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    // MENU PRINCIPAL
-    <header className="bg-yellow-300 fixed w-full top-0 z-40 shadow-md">
+    <header className="bg-yellow-300 w-full top-0 z-40 shadow-2xl">
+      {/* MENU PRINCIPAL */}
       <nav className="flex items-center justify-between px-4 py-4 md:px-8">
         <div className="flex items-center gap-4">
           <IoMenu
@@ -54,19 +54,19 @@ export default function Header() {
         </li>
         <li
           onClick={() => setMenuOpen(false)}
-          className="hover:text-white cursor-pointer  transition-colors duration-250"
+          className="hover:text-white cursor-pointer transition-colors duration-250"
         >
           Nossa História
         </li>
         <li
           onClick={() => setMenuOpen(false)}
-          className="hover:text-white cursor-pointer  transition-colors duration-250"
+          className="hover:text-white cursor-pointer transition-colors duration-250"
         >
           Seja Voluntário
         </li>
         <li
           onClick={() => setMenuOpen(false)}
-          className="hover:text-white cursor-pointer  transition-colors duration-250"
+          className="hover:text-white cursor-pointer transition-colors duration-250"
         >
           Contatos
         </li>
