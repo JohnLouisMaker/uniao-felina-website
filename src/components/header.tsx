@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import logoUniaoFelina from "../assets/imgs/logoUniaoFelina.png";
+import bgCat from "../assets/imgs/bgCat.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-yellow-300 w-full top-0 z-40 shadow-2xl">
-      {/* MENU PRINCIPAL */}
-      <nav className="flex items-center justify-between px-4 py-4 md:px-8">
+    <header className="relative w-full top-0 z-40 shadow-2xl  bg-yellow-400">
+      <div
+        className="absolute inset-0 bg-cover bg-scroll opacity-50"
+        style={{ backgroundImage: `url(${bgCat})` }}
+      ></div>
+
+      <nav className="relative flex items-center justify-between px-4 py-4 md:px-8">
         <div className="flex items-center gap-4">
           <IoMenu
             onClick={() => setMenuOpen(true)}
@@ -21,11 +26,19 @@ export default function Header() {
           />
         </div>
 
-        <ul className="hidden md:flex gap-6 text-purple-800 font-shikhand">
-          <li>Quem Somos</li>
-          <li>Nossa História</li>
-          <li>Seja Voluntário</li>
-          <li>Contatos</li>
+        <ul className="hidden md:flex text-xl gap-6 text-purple-800 font-shikhand">
+          <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
+            Quem Somos
+          </li>
+          <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
+            Nossa História
+          </li>
+          <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
+            Seja Voluntário
+          </li>
+          <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
+            Contatos
+          </li>
         </ul>
       </nav>
 
@@ -48,25 +61,25 @@ export default function Header() {
         />
         <li
           onClick={() => setMenuOpen(false)}
-          className="hover:text-white cursor-pointer transition-colors duration-250"
+          className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
           Quem Somos
         </li>
         <li
           onClick={() => setMenuOpen(false)}
-          className="hover:text-white cursor-pointer transition-colors duration-250"
+          className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
           Nossa História
         </li>
         <li
           onClick={() => setMenuOpen(false)}
-          className="hover:text-white cursor-pointer transition-colors duration-250"
+          className="  hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
           Seja Voluntário
         </li>
         <li
           onClick={() => setMenuOpen(false)}
-          className="hover:text-white cursor-pointer transition-colors duration-250"
+          className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
           Contatos
         </li>

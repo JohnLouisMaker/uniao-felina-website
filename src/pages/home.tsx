@@ -10,6 +10,8 @@ export default function Home() {
           União Felina
         </h1>
         <h2 className="text-xl text-amber-50 font-shikhand justify-center flex">Salvando Vidinhas</h2>
+
+
       </main>
 
       <section className="flex justify-center bg-purple-800">

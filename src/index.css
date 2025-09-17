@@ -9,3 +9,35 @@
 @theme{
     --font-shikhand: Shrikhand;
 }
+
+
+/* app.css */
+
+@keyframes scrollBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000% 0;
+  }
+}
+
+
+@keyframes scrollBg {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 0; } /* sempre horizontal direita */
+}
+
+.bg-scroll {
+  animation: scrollBg 100s linear infinite;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+@media (min-width: 768px) {
+  .bg-scroll { animation-duration: 80s; }
+}
+
+@media (min-width: 1024px) {
+  .bg-scroll { animation-duration: 70s; }
+}
