@@ -1,4 +1,5 @@
 import Header from "../components/header";
+import Timeline from "../components/linhaDoTempo";
 import houseCat from "../assets/imgs/animal-shelter.png";
 import food from "../assets/imgs/cat-food.png";
 import smile from "../assets/imgs/smile.png";
@@ -21,7 +22,6 @@ export default function Home() {
 
       <section className="bg-purple-900 py-12 flex items-center font-shikhand">
         <ul className="flex flex-col md:flex-row justify-around items-stretch w-full px-6 md:px-12 lg:px-20 gap-8 md:gap-0">
-          {/* Missão */}
           <li className="flex flex-col items-center text-center w-full md:w-1/3 p-6 md:p-4">
             <h2 className="text-4xl text-white mb-3">Missão</h2>
             <p className="text-white leading-relaxed text-lg mb-6">
@@ -35,7 +35,6 @@ export default function Home() {
             />
           </li>
 
-          {/* Visão */}
           <li className="flex flex-col items-center text-center w-full md:w-1/3 p-6 md:p-4 md:border-l md:border-r border-purple-700">
             <h2 className="text-4xl text-white mb-3">Visão</h2>
             <p className="text-white leading-relaxed text-lg mb-6">
@@ -50,7 +49,6 @@ export default function Home() {
             />
           </li>
 
-          {/* Valores */}
           <li className="flex flex-col items-center text-center w-full md:w-1/3 p-6 md:p-4">
             <h2 className="text-4xl text-white mb-3">Valores</h2>
             <p className="text-white leading-relaxed text-lg mb-6">
@@ -66,11 +64,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="bg-amber-400 py-12 flex flex-col items-center">
-        <h2 className="text-5xl text-purple-900 font-bold mb-6 font-shikhand">
-          Nossa história
-        </h2>
-      </section>
+      <Timeline />
     </div>
   );
 }
