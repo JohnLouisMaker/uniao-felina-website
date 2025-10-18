@@ -6,6 +6,20 @@ import bgCat from "../assets/imgs/bgCat.png";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  type SectionId = "impacto-do-trabalho" | "historia" | "Ajuda" | "contatos";
+
+  interface ScrollToSection {
+    (id: SectionId): void;
+  }
+
+  const scrollToSection: ScrollToSection = (id) => {
+    const section: HTMLElement | null = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // fecha o menu mobile se estiver aberto
+    }
+  };
+
   return (
     <header className="relative w-full top-0 z-40 shadow-2xl  bg-yellow-400">
       <div
@@ -27,16 +41,28 @@ export default function Header() {
         </div>
 
         <ul className="hidden md:flex text-xl gap-6 text-purple-800 font-shikhand">
-          <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
+          <li
+            className="hover:text-white transform transition-transform duration-300 hover:scale-110"
+            onClick={() => scrollToSection("impacto-do-trabalho")}
+          >
             Impacto do Trabalho
           </li>
-          <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
+          <li
+            className="hover:text-white transform transition-transform duration-300 hover:scale-110"
+            onClick={() => scrollToSection("historia")}
+          >
             Nossa história
           </li>
-          <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
+          <li
+            className="hover:text-white transform transition-transform duration-300 hover:scale-110"
+            onClick={() => scrollToSection("Ajuda")}
+          >
             Formas de Ajudar
           </li>
-          <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
+          <li
+            className="hover:text-white transform transition-transform duration-300 hover:scale-110"
+            onClick={() => scrollToSection("contatos")}
+          >
             Contatos
           </li>
         </ul>
@@ -60,25 +86,37 @@ export default function Header() {
           className="text-yellow-300 text-2xl cursor-pointer hover:text-white transition-colors duration-250"
         />
         <li
-          onClick={() => setMenuOpen(false)}
+          onClick={() => {
+            setMenuOpen(false);
+            scrollToSection("impacto-do-trabalho");
+          }}
           className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
           Impacto do Trabalho
         </li>
         <li
-          onClick={() => setMenuOpen(false)}
+          onClick={() => {
+            setMenuOpen(false);
+            scrollToSection("historia");
+          }}
           className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
           Nossa História
         </li>
         <li
-          onClick={() => setMenuOpen(false)}
+          onClick={() => {
+            setMenuOpen(false);
+            scrollToSection("Ajuda");
+          }}
           className="  hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
           Como Ajudar
         </li>
         <li
-          onClick={() => setMenuOpen(false)}
+          onClick={() => {
+            setMenuOpen(false);
+            scrollToSection("contatos");
+          }}
           className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
           Contatos

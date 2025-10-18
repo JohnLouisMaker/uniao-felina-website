@@ -39,7 +39,6 @@ const timelineData = [
   },
 ];
 
-
 interface TimelineItemProps {
   index: number;
   year: string;
@@ -49,7 +48,6 @@ interface TimelineItemProps {
   textRight: string;
 }
 
-
 const TimelineItem = ({
   index,
   year,
@@ -58,7 +56,6 @@ const TimelineItem = ({
   titleRight,
   textRight,
 }: TimelineItemProps) => {
-
   const isLeft = index % 2 === 0;
 
   return (
@@ -100,7 +97,7 @@ const TimelineItem = ({
 // Componente principal da Timeline
 export default function Timeline() {
   return (
-    <div className="bg-amber-400 w-full py-16 px-4 sm:px-8">
+    <div id="historia" className="bg-amber-400 w-full py-16 px-4 sm:px-8">
       {/* Título da Seção */}
       <div className="text-center mb-16">
         <h2
@@ -116,7 +113,6 @@ export default function Timeline() {
 
       {/* Container da Linha do Tempo */}
       <div className="max-w-4xl mx-auto relative">
-      
         <div className="absolute left-1/2 top-0 h-full w-1 bg-white transform -translate-x-1/2 shadow-md fo"></div>
 
         <ul className="relative font-questrial ">

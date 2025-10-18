@@ -7,6 +7,12 @@ import cat from "../assets/imgs/fotoCatHome.png";
 import ImpactoDoTrabalho from "../components/impactDados";
 import ComoAjudar from "../components/comoAjudar";
 
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+
+import { FaInstagram } from "react-icons/fa";
+
 export default function Home() {
   return (
     <div>
@@ -14,9 +20,7 @@ export default function Home() {
 
       <main className="flex flex-col lg:flex-row items-center lg:items-start bg-purple-600 py-10 text-center lg:text-left px-6 lg:px-20 ">
         <div className="flex flex-col items-center lg:items-start w-full lg:w-2/3 gap-4">
-          <h1 className="text-8xl text-white font-shikhand ">
-            União Felina
-          </h1>
+          <h1 className="text-7xl text-white font-shikhand ">União Felina</h1>
           <h2 className="text-2xl text-amber-100 font-shikhand mb-6">
             Salvando Vidinhas
           </h2>
@@ -50,7 +54,10 @@ export default function Home() {
         />
       </main>
 
-      <section className="bg-purple-900 py-12 flex items-center font-shikhand">
+      <section
+        id="objetivos"
+        className="bg-purple-900 py-12 flex items-center font-shikhand"
+      >
         <ul className="flex flex-col md:flex-row justify-around items-stretch w-full px-6 md:px-12 lg:px-20 gap-8 md:gap-0">
           <li className="flex flex-col items-center text-center w-full md:w-1/3 p-6 md:p-4">
             <h2 className="text-4xl text-white mb-3">Missão</h2>
@@ -97,29 +104,93 @@ export default function Home() {
       <Timeline />
       <ComoAjudar />
 
-      <section className="bg-purple-900 text-white py-12 px-6 lg-:px20">
-        <div className="flex items-center justify-center mb-12">
-          <img src="src/assets/imgs/logoUniaoFelina.png" alt="União felina"  className="w-16 h-16 sm:h-20 mr-4"/>
-          <h2 className="text-3x1 sm:text-4x1 font-shikhand"> União Felina</h2>
+      <footer className="bg-purple-900 text-white py-12 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          {/* Cabeçalho do Footer com Logo */}
+          <div className="flex items-center gap-4 justify-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-shikhand text-amber-400">
+              Contatos
+            </h2>
+          </div>
+
+          {/* Conteúdo Principal */}
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16 bg-white rounded-2xl p-8 lg:p-10 shadow-2xl">
+            {/* Informações de Contato */}
+            <div className="flex-grow space-y-6 text-gray-800">
+              {/* Localização */}
+              <div className="flex  gap-3">
+                <FaLocationDot className="text-purple-600 text-2xl flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-bold text-lg text-purple-800">
+                    Localização
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Av. da Universidade, 2762 - Centro,
+                    <br />
+                    Fortaleza - CE, 60020-181
+                  </p>
+                </div>
+              </div>
+
+              {/* Telefone */}
+              <div className="flex items-center gap-3">
+                <FaPhoneAlt className="text-purple-600 text-xl flex-shrink-0" />
+                <div>
+                  <p className="font-bold text-lg text-purple-800">Telefone</p>
+                  <a
+                    href="tel:+5599999999999"
+                    className="text-gray-700 hover:text-purple-600 transition-colors"
+                  >
+                    (99) 99999-9999
+                  </a>
+                </div>
+              </div>
+
+              {/* E-mail */}
+              <div className="flex items-center gap-3">
+                <MdEmail className="text-purple-600 text-2xl flex-shrink-0" />
+                <div>
+                  <p className="font-bold text-lg text-purple-800">E-mail</p>
+                  <a
+                    href="mailto:uniaofelinaufc@gmail.com"
+                    className="text-gray-700 hover:text-purple-600 transition-colors"
+                  >
+                    uniaofelinaufc@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Redes Sociais */}
+              <div className="flex items-center gap-3 pt-4">
+                <FaInstagram className="text-purple-600 text-2xl flex-shrink-0" />
+                <div>
+                  <p className="font-bold text-lg text-purple-800">
+                    Redes Sociais
+                  </p>
+                  <a
+                    href="https://instagram.com/uniaofelina"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-purple-600 hover:underline transition-colors"
+                  >
+                    @uniaofelina
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Rodapé Final */}
+          <div className="text-center mt-10 pt-8 border-t border-purple-700">
+            <p className="text-amber-400 font-semibold text-lg mb-2">
+              © 2024 União Felina - Todos os direitos reservados
+            </p>
+            <p className="text-purple-200 text-sm">
+              Feito com 💛 para salvar vidas
+            </p>
+          </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-      </section>
-
-
-
-
-
-
-      
+      </footer>
     </div>
   );
 }

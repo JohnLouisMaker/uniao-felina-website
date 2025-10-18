@@ -16,12 +16,11 @@ export default function ComoAjudar() {
     );
   };
 
+  const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf0drsdZFOSA9-unSiaTBmlEagupEM8Xf5sNLmAWPUClfguvQ/viewform";
 
-  const handleVolunteer = () => {
-    alert(
-      "Quer ser voluntário?\n\nEntre em contato conosco:\n📱 WhatsApp: [seu número]\n E-mail: voluntario@uniaofelina.org"
-    );
-  };
+const handleVolunteer = () => {
+  window.open(FORM_URL, "_blank");
+};
 
   const ajudaOptions: AjudaCard[] = [
     {
@@ -44,7 +43,7 @@ export default function ComoAjudar() {
         "Produtos de limpeza",
         "Caixas de transporte",
       ],
-      additionalInfo: "Entrega: Benfica da UFC – Fortaleza/CE",
+      additionalInfo: "Entrega: Avenida da Universidade. Centro de Humanidades 1 e 2, FACED e Reitoria da UFC.",
     },
     {
       icon: "",
@@ -62,6 +61,7 @@ export default function ComoAjudar() {
       links: [
         { name: "Instagram", url: "https://instagram.com/uniaofelina" },
         { name: "WhatsApp", url: "https://wa.me/55" },
+        { name: "E-mail", url: "uniaofelinaufc@gmail.com"},
       ],
     },
   ];
@@ -69,7 +69,7 @@ export default function ComoAjudar() {
   return (
     <div className="bg-gradient-to-b from-purple-50 to-white min-h-screen text-gray-800 py-16 px-6">
 
-      <section className="text-center mb-16">
+      <section id="Ajuda" className="text-center mb-16" >
         <h1 className="text-5xl font-bold text-purple-800 mb-4 font-shikhand">
           Como Ajudar a União Felina
         </h1>
