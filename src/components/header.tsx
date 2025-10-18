@@ -28,13 +28,13 @@ export default function Header() {
 
         <ul className="hidden md:flex text-xl gap-6 text-purple-800 font-shikhand">
           <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
-            Quem Somos
+            Impacto do Trabalho
           </li>
           <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
             Nossa História
           </li>
           <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
-            Seja Voluntário
+            Formas de Ajudar
           </li>
           <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
             Contatos
@@ -63,7 +63,7 @@ export default function Header() {
           onClick={() => setMenuOpen(false)}
           className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
-          Quem Somos
+          Impacto do Trabalho
         </li>
         <li
           onClick={() => setMenuOpen(false)}
@@ -75,7 +75,7 @@ export default function Header() {
           onClick={() => setMenuOpen(false)}
           className="  hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
-          Seja Voluntário
+          Como Ajudar
         </li>
         <li
           onClick={() => setMenuOpen(false)}

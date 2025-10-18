@@ -1,4 +1,3 @@
-// Dados da linha do tempo
 const timelineData = [
   {
     year: "2020",
@@ -40,7 +39,7 @@ const timelineData = [
   },
 ];
 
-// Interface para props do TimelineItem
+
 interface TimelineItemProps {
   index: number;
   year: string;
@@ -50,7 +49,7 @@ interface TimelineItemProps {
   textRight: string;
 }
 
-// Componente para cada item da timeline
+
 const TimelineItem = ({
   index,
   year,
@@ -59,7 +58,7 @@ const TimelineItem = ({
   titleRight,
   textRight,
 }: TimelineItemProps) => {
-  // Itens pares (0, 2, 4...) ficam à esquerda
+
   const isLeft = index % 2 === 0;
 
   return (
@@ -110,17 +109,17 @@ export default function Timeline() {
         >
           Nossa história
         </h2>
-        <p className="text-xl text-purple-700 font-semibold">
+        <p className="text-xl text-purple-700 font-questrial font-bold">
           Uma jornada de amor e dedicação aos animais
         </p>
       </div>
 
       {/* Container da Linha do Tempo */}
       <div className="max-w-4xl mx-auto relative">
-        {/* Linha vertical central que conecta todos os pontos */}
-        <div className="absolute left-1/2 top-0 h-full w-1 bg-white transform -translate-x-1/2 shadow-md"></div>
+      
+        <div className="absolute left-1/2 top-0 h-full w-1 bg-white transform -translate-x-1/2 shadow-md fo"></div>
 
-        <ul className="relative">
+        <ul className="relative font-questrial ">
           {timelineData.map((item, index) => (
             <TimelineItem key={index} index={index} {...item} />
           ))}

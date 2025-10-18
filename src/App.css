@@ -6,6 +6,12 @@
     src: url("./assets//fonts/Shrikhand-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Questrial";
+    src: url("./assets//fonts/Questrial-Regular.ttf") format("truetype");
+}
+
 @theme{
     --font-shikhand: Shrikhand;
+    --font-questrial: Questrial;
 }
