@@ -42,25 +42,25 @@ export default function Header() {
 
         <ul className="hidden md:flex text-xl gap-6 text-purple-800 font-shikhand">
           <li
-            className="hover:text-white transform transition-transform duration-300 hover:scale-110"
+            className="hover:text-white transform transition-transform duration-300 hover:scale-110 cursor-pointer"
             onClick={() => scrollToSection("impacto-do-trabalho")}
           >
             Impacto do Trabalho
           </li>
           <li
-            className="hover:text-white transform transition-transform duration-300 hover:scale-110"
+            className="hover:text-white transform transition-transform duration-300 hover:scale-110 cursor-pointer"
             onClick={() => scrollToSection("historia")}
           >
             Nossa história
           </li>
           <li
-            className="hover:text-white transform transition-transform duration-300 hover:scale-110"
+            className="hover:text-white transform transition-transform duration-300 hover:scale-110 cursor-pointer"
             onClick={() => scrollToSection("Ajuda")}
           >
             Formas de Ajudar
           </li>
           <li
-            className="hover:text-white transform transition-transform duration-300 hover:scale-110"
+            className="hover:text-white transform transition-transform duration-300 hover:scale-110 cursor-pointer"
             onClick={() => scrollToSection("contatos")}
           >
             Contatos

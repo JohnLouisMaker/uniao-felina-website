@@ -66,8 +66,9 @@ const handleVolunteer2 = () => {
       title: "Espalhe essa ideia!",
       description:
         "Compartilhe o União Felina nas redes sociais e ajude a alcançar mais pessoas.",
-      buttonText: "Quero ser voluntário",
-      action: handleVolunteer2,
+      links: [
+        { name: "Instagram", url: "https://instagram.com/uniaofelina" },
+      ],
     },
   ];
 
