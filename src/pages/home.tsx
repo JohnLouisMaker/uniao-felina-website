@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className="flex flex-col lg:flex-row items-center lg:items-start bg-purple-600 py-10 text-center lg:text-left px-6 lg:px-20 ">
         <div className="flex flex-col items-center lg:items-start w-full lg:w-2/3 gap-4">
-          <h1 className="text-5xl text-white font-shikhand ">
+          <h1 className="text-8xl text-white font-shikhand ">
             União Felina
           </h1>
           <h2 className="text-2xl text-amber-100 font-shikhand mb-6">
@@ -97,12 +97,29 @@ export default function Home() {
       <Timeline />
       <ComoAjudar />
 
-      <section className="bg-purple-900">
-        <div className="justify-content">
-          
+      <section className="bg-purple-900 text-white py-12 px-6 lg-:px20">
+        <div className="flex items-center justify-center mb-12">
+          <img src="src/assets/imgs/logoUniaoFelina.png" alt="União felina"  className="w-16 h-16 sm:h-20 mr-4"/>
+          <h2 className="text-3x1 sm:text-4x1 font-shikhand"> União Felina</h2>
         </div>
 
+
+
+
+
+
+
+
+
+
       </section>
+
+
+
+
+
+
+      
     </div>
   );
 }

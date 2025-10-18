@@ -16,11 +16,6 @@ export default function ComoAjudar() {
     );
   };
 
-  const handlePetDonor = () => {
-    alert(
-      "Para cadastrar seu pet como doador, entre em contato:\n\n WhatsApp: [seu número]\n E-mail: contato@uniaofelina.org"
-    );
-  };
 
   const handleVolunteer = () => {
     alert(
@@ -29,19 +24,6 @@ export default function ComoAjudar() {
   };
 
   const ajudaOptions: AjudaCard[] = [
-    {
-      icon: "",
-      title: "Torne seu pet um doador",
-      description:
-        "Seu gato ou cachorro pode ser um herói! Veja se ele atende aos requisitos básicos:",
-      list: [
-        "Idade entre 1 e 8 anos",
-        "Estar saudável e vacinado",
-        "Peso mínimo de 5kg (gatos) ou 25kg (cães)",
-      ],
-      buttonText: "Quero cadastrar meu pet",
-      action: handlePetDonor,
-    },
     {
       icon: "",
       title: "Ajude com doações financeiras",
@@ -79,7 +61,6 @@ export default function ComoAjudar() {
         "Compartilhe o União Felina nas redes sociais e ajude a alcançar mais pessoas.",
       links: [
         { name: "Instagram", url: "https://instagram.com/uniaofelina" },
-        { name: "Facebook", url: "https://facebook.com/uniaofelina" },
         { name: "WhatsApp", url: "https://wa.me/55" },
       ],
     },
@@ -176,4 +157,4 @@ export default function ComoAjudar() {
       </div>
     </div>
   );
-}
+} 
