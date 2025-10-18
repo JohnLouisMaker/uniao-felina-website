@@ -11,15 +11,22 @@ interface AjudaCard {
 
 export default function ComoAjudar() {
   const handleDonate = () => {
+    const pixKey = "uniaofelina@ong.com.br";
+  navigator.clipboard.writeText(pixKey);
     alert(
-      "Chave PIX: uniaofelina@ong.com.br\n\nObrigado por ajudar a salvar vidas!"
+      "Pix Copiado"
     );
   };
 
   const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf0drsdZFOSA9-unSiaTBmlEagupEM8Xf5sNLmAWPUClfguvQ/viewform";
+  const CONTAT = "https://api.whatsapp.com/send/?phone=5585981618306&text=Ol%C3%A1%21+Quero+fazer+uma+doa%C3%A7%C3%A3o+para+o+Uni%C3%A3o+Felina.&type=phone_number&app_absent=0";
 
 const handleVolunteer = () => {
   window.open(FORM_URL, "_blank");
+};
+
+const handleVolunteer2 = () => {
+  window.open(CONTAT, "_blank");
 };
 
   const ajudaOptions: AjudaCard[] = [
@@ -43,7 +50,8 @@ const handleVolunteer = () => {
         "Produtos de limpeza",
         "Caixas de transporte",
       ],
-      additionalInfo: "Entrega: Avenida da Universidade. Centro de Humanidades 1 e 2, FACED e Reitoria da UFC.",
+      buttonText: "Entre em contato",
+      action: handleVolunteer2,
     },
     {
       icon: "",
@@ -58,11 +66,8 @@ const handleVolunteer = () => {
       title: "Espalhe essa ideia!",
       description:
         "Compartilhe o União Felina nas redes sociais e ajude a alcançar mais pessoas.",
-      links: [
-        { name: "Instagram", url: "https://instagram.com/uniaofelina" },
-        { name: "WhatsApp", url: "https://wa.me/55" },
-        { name: "E-mail", url: "uniaofelinaufc@gmail.com"},
-      ],
+      buttonText: "Quero ser voluntário",
+      action: handleVolunteer2,
     },
   ];
 
