@@ -5,6 +5,7 @@ import food from "../assets/imgs/cat-food.png";
 import smile from "../assets/imgs/smile.png";
 import cat from "../assets/imgs/fotoCatHome.png";
 import ImpactoDoTrabalho from "../components/impactDados";
+import ComoAjudar from "../components/comoAjudar";
 
 export default function Home() {
   return (
@@ -12,15 +13,13 @@ export default function Home() {
       <Header />
 
       <main className="flex flex-col lg:flex-row items-center lg:items-start bg-purple-600 py-10 text-center lg:text-left px-6 lg:px-20 ">
-        {/* Bloco de título, subtítulo, texto e imagem mobile */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-2/3 gap-4">
-          <h1 className="text-5xl text-white font-shikhand mb-2">
+          <h1 className="text-5xl text-white font-shikhand ">
             União Felina
           </h1>
           <h2 className="text-2xl text-amber-100 font-shikhand mb-6">
             Salvando Vidinhas
           </h2>
-
 
           <img
             src={cat}
@@ -28,7 +27,7 @@ export default function Home() {
             className="w-50 sm:w-60 md:w-64 lg:hidden  mb-4"
           />
 
-          <p className="font-questrial text-white">
+          <p className="font-questrial text-white text-lg">
             Bem-vindo à União Felina!
             <br />
             Somos um grupo de voluntários movidos pelo amor e dedicados a
@@ -94,9 +93,16 @@ export default function Home() {
           </li>
         </ul>
       </section>
-
-      <Timeline />
       <ImpactoDoTrabalho />
+      <Timeline />
+      <ComoAjudar />
+
+      <section className="bg-purple-900">
+        <div className="justify-content">
+          
+        </div>
+
+      </section>
     </div>
   );
 }

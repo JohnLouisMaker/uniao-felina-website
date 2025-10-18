@@ -28,10 +28,10 @@ export default function Header() {
 
         <ul className="hidden md:flex text-xl gap-6 text-purple-800 font-shikhand">
           <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
-            Impacto do Trabalho
+            Nossa História
           </li>
           <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
-            Nossa História
+            Impacto do Trabalho
           </li>
           <li className="hover:text-white transform transition-transform duration-300 hover:scale-110">
             Formas de Ajudar
@@ -63,13 +63,13 @@ export default function Header() {
           onClick={() => setMenuOpen(false)}
           className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
-          Impacto do Trabalho
+          Nossa História
         </li>
         <li
           onClick={() => setMenuOpen(false)}
           className=" hover:text-white transform transition-transform duration-300 hover:scale-110"
         >
-          Nossa História
+          Impacto do Trabalho
         </li>
         <li
           onClick={() => setMenuOpen(false)}
